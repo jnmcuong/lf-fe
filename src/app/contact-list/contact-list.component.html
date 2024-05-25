@@ -1,0 +1,11 @@
+<div style="display: block; text-align: center; margin-top: 100px;">
+    <h3>Contact List</h3>
+    <input type="search" placeholder="Search" [(ngModel)]="searchText" (ngSubmit)="search()" (keydown.enter)="search()"/>
+    <ul style="list-style-type: none;">
+        <li *ngFor="let contact of contacts" (click)="onSelect(contact)" style="cursor: pointer;">
+            <span style="margin: 1rem;">{{contact.firstName}}</span>
+            <span style="margin: 1rem;">{{contact.lastName}}</span>
+            <span style="margin: 1rem;">{{contact.email}}</span>
+        </li>
+    </ul>
+</div>
